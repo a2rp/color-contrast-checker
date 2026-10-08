@@ -73,7 +73,7 @@ const ContrastWorkbench = () => {
               { label: "AA", detail: "Large text", pass: levels?.aaLarge },
               { label: "AAA", detail: "Normal text", pass: levels?.aaaNormal },
               { label: "AAA", detail: "Large text", pass: levels?.aaaLarge },
-            ].map(({ label, detail, pass }, index) => <div className={`${styles.level} ${pass ? styles.pass : styles.fail}`} key={`${label}-${detail}`}><span>{label} <small>{detail}</small></span><b>{levels === null ? "--" : pass ? <><FiCheck aria-hidden="true" /> Pass</> : <><FiX aria-hidden="true" /> Fail</>}</b><i>{index % 2 === 0 ? "4.5:1" : "3:1"}{label === "AAA" && index % 2 === 0 ? " / 7:1" : ""}</i></div>)}
+            ].map(({ label, detail, pass }) => <div className={`${styles.level} ${pass ? styles.pass : styles.fail}`} key={`${label}-${detail}`}><span>{label} <small>{detail}</small></span><b>{levels === null ? "--" : pass ? <><FiCheck aria-hidden="true" /> Pass</> : <><FiX aria-hidden="true" /> Fail</>}</b><i>{label === "AAA" ? (detail === "Normal text" ? "7:1" : "4.5:1") : (detail === "Normal text" ? "4.5:1" : "3:1")}</i></div>)}
           </div>
         </div>
       </div>

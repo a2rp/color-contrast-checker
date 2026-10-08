@@ -19,7 +19,7 @@ const App = () => (
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroInner}>
           <div><p className={styles.heroLabel}><FiEye aria-hidden="true" /> COLOR ACCESSIBILITY / WCAG 2.2</p><h1 id="hero-title">Color you can<br /><span>count on.</span></h1><p className={styles.heroDescription}>A quick, clear check for text and background colors. See the pair in context and understand which contrast targets it meets.</p><a className={styles.startLink} href="#checker">Check a color pair <FiArrowDown aria-hidden="true" /></a></div>
-          <div className={styles.heroPreview} aria-label="Contrast sample preview"><div><span>TEXT</span><span>BACKGROUND</span></div><p><b>Aa</b><span>Readability has a ratio.</span></p><footer><FiCheck aria-hidden="true" /> Example pair / 12.63:1</footer></div>
+          <div className={styles.heroPreview} aria-label="Contrast sample preview"><div><span>TEXT</span><span>BACKGROUND</span></div><p><b>Aa</b><span>Readability has a ratio.</span></p><footer><FiCheck aria-hidden="true" /> Example pair / AA + AAA pass</footer></div>
         </div>
         <div className={styles.heroFoot}><span>Relative luminance calculation</span><span>INSTANT FEEDBACK <i /></span></div>
       </section>
@@ -38,3 +38,4 @@ const App = () => (
 );
 
 export default App;
+
