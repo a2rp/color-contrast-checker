@@ -1,5 +1,5 @@
 ﻿import { useMemo, useState } from "react";
-import { FiArrowLeftRight, FiCheck, FiInfo, FiX } from "react-icons/fi";
+import { FiCheck, FiInfo, FiRepeat, FiX } from "react-icons/fi";
 import { contrastRatio, getContrastLevels, normalizeHex } from "../../utils/contrast.js";
 import styles from "./styles.module.css";
 
@@ -47,7 +47,7 @@ const ContrastWorkbench = () => {
             <div className={styles.colorRow}><input aria-label="Choose foreground color" type="color" value={foreground ?? "#232736"} onChange={(event) => setForegroundText(event.target.value.toUpperCase())} /><input id="foreground-hex" value={foregroundText} maxLength={7} aria-invalid={!foreground} aria-describedby={!foreground ? "foreground-error" : undefined} onChange={(event) => setForegroundText(event.target.value)} onBlur={() => normalizeField(foregroundText, setForegroundText)} spellCheck="false" /></div>
             {!foreground && <span className={styles.fieldError} id="foreground-error">Use a 3 or 6 digit hex value.</span>}
           </div>
-          <button className={styles.swapButton} type="button" onClick={swapColors} aria-label="Swap foreground and background colors"><FiArrowLeftRight aria-hidden="true" /><span>Swap colors</span></button>
+          <button className={styles.swapButton} type="button" onClick={swapColors} aria-label="Swap foreground and background colors"><FiRepeat aria-hidden="true" /><span>Swap colors</span></button>
           <div className={styles.colorField}>
             <label htmlFor="background-hex">Background</label>
             <div className={styles.colorRow}><input aria-label="Choose background color" type="color" value={background ?? "#FFFFFF"} onChange={(event) => setBackgroundText(event.target.value.toUpperCase())} /><input id="background-hex" value={backgroundText} maxLength={7} aria-invalid={!background} aria-describedby={!background ? "background-error" : undefined} onChange={(event) => setBackgroundText(event.target.value)} onBlur={() => normalizeField(backgroundText, setBackgroundText)} spellCheck="false" /></div>
