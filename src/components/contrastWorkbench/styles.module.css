@@ -1,0 +1,83 @@
+﻿.workbench {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 54px 0 62px;
+  scroll-margin-top: 82px;
+
+  .heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+  .heading > div > p { margin-bottom: 6px; color: var(--accent-deep); font-family: var(--mono); font-size: 8px; font-weight: 760; letter-spacing: 0.12em; }
+  .heading h2 { color: var(--ink); font-size: clamp(26px, 3.5vw, 36px); font-weight: 780; letter-spacing: -0.055em; }
+  .heading > div > span { display: block; max-width: 530px; margin-top: 6px; color: var(--muted); font-size: 11px; }
+  .liveTag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; border: 1px solid #d8e7d8; border-radius: 99px; color: #3d7257; background: #eef6ed; font-size: 8px; font-weight: 700; }
+  .liveTag i { width: 5px; height: 5px; border-radius: 50%; background: #5aa76d; }
+
+  .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 13px; }
+  .controls, .previewColumn { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: 0 7px 26px rgb(38 44 51 / 4%); }
+  .controls { align-self: start; }
+  .colorField label { display: block; margin-bottom: 6px; color: var(--ink); font-size: 10px; font-weight: 730; }
+  .colorRow { display: grid; grid-template-columns: 45px minmax(0, 1fr); gap: 7px; }
+  .colorRow input[type="color"] { width: 45px; height: 38px; padding: 4px; border: 1px solid var(--line-strong); border-radius: 7px; background: var(--paper); }
+  .colorRow input[type="text"], .colorRow input:not([type]) { width: 100%; min-width: 0; height: 38px; padding: 0 9px; border: 1px solid var(--line-strong); border-radius: 7px; color: var(--ink); background: #fff; font-family: var(--mono); font-size: 11px; text-transform: uppercase; }
+  .colorRow input[aria-invalid="true"] { border-color: #bb5848; }
+  .colorRow input:focus { outline: 2px solid var(--accent-deep); outline-offset: 1px; }
+  .fieldError { display: block; margin-top: 5px; color: #a3493b; font-size: 8px; }
+  .swapButton { display: inline-flex; min-height: 28px; align-items: center; gap: 6px; margin: 8px 0 11px; padding: 0 8px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink-soft); background: var(--surface); font-size: 8px; transition: border-color 150ms ease, box-shadow 150ms ease; }
+  .swapButton svg { width: 12px; height: 12px; }
+  .swapButton:hover { border-color: var(--accent-deep); box-shadow: 0 0 0 2px rgb(200 117 77 / 10%); }
+  .presets { margin-top: 22px; border: 0; }
+  .presets legend { margin-bottom: 8px; color: var(--ink); font-size: 9px; font-weight: 730; }
+  .presets > div { display: grid; gap: 5px; }
+  .presets button { display: flex; min-height: 33px; align-items: center; gap: 8px; padding: 0 7px; border: 1px solid transparent; border-radius: 6px; color: var(--ink-soft); text-align: left; background: transparent; font-size: 8px; transition: border-color 150ms ease, box-shadow 150ms ease; }
+  .presets button:hover { border-color: var(--line); box-shadow: 0 0 0 2px rgb(65 72 199 / 7%); }
+  .presets button span { display: grid; width: 29px; height: 22px; place-items: center; border: 1px solid rgb(0 0 0 / 9%); border-radius: 4px; font-size: 9px; font-weight: 800; }
+  .note { display: flex; align-items: flex-start; gap: 7px; margin-top: 18px; padding-top: 11px; border-top: 1px solid var(--line); color: var(--muted); }
+  .note svg { width: 12px; height: 12px; flex: 0 0 auto; margin-top: 1px; color: var(--accent-deep); }
+  .note p { font-size: 8px; line-height: 1.55; }
+
+  .previewColumn { display: grid; grid-template-rows: auto auto 1fr; gap: 11px; }
+  .preview { display: grid; min-height: 192px; align-content: center; justify-items: start; padding: 22px; border: 1px solid rgb(0 0 0 / 10%); border-radius: 9px; }
+  .preview > span { opacity: 0.68; font-family: var(--mono); font-size: 7px; font-weight: 700; letter-spacing: 0.1em; }
+  .preview h3 { margin-top: 12px; font-size: 25px; font-weight: 760; letter-spacing: -0.045em; line-height: 1.1; }
+  .preview p { max-width: 510px; margin-top: 8px; font-size: 10px; line-height: 1.6; }
+  .preview a { margin-top: 10px; text-decoration: underline; text-underline-offset: 2px; font-size: 9px; font-weight: 700; }
+  .ratioCard { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+  .ratioCard > div { display: grid; gap: 2px; }
+  .ratioCard > div span { color: var(--muted); font-family: var(--mono); font-size: 7px; font-weight: 700; letter-spacing: 0.1em; }
+  .ratioCard > div strong { color: var(--ink); font-family: var(--mono); font-size: 24px; font-weight: 700; letter-spacing: -0.06em; }
+  .ratioCard > p { max-width: 220px; color: var(--ink-soft); text-align: right; font-size: 9px; line-height: 1.5; }
+  .levelGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .level { display: grid; min-height: 62px; align-content: space-between; gap: 6px; padding: 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); }
+  .level > span { color: var(--ink); font-size: 9px; font-weight: 770; }
+  .level > span small { display: block; margin-top: 2px; color: var(--muted); font-size: 7px; font-weight: 500; }
+  .level > b { display: flex; align-items: center; gap: 4px; font-size: 8px; }
+  .level > b svg { width: 11px; height: 11px; }
+  .level > i { color: var(--muted); font-family: var(--mono); font-size: 6px; font-style: normal; }
+  .pass > b { color: #32714c; }
+  .fail > b { color: #a64d3f; }
+
+  @media (max-width: 840px) {
+    .layout { grid-template-columns: 230px minmax(0, 1fr); }
+    .controls, .previewColumn { padding: 13px; }
+    .levelGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 650px) {
+    width: calc(100% - 30px);
+    padding: 40px 0 47px;
+    .heading { align-items: flex-start; }
+    .heading > div > span { max-width: 460px; font-size: 10px; line-height: 1.65; }
+    .layout { grid-template-columns: 1fr; }
+    .controls, .previewColumn { padding: 14px; }
+    .colorRow { max-width: 380px; }
+    .presets > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .presets button { font-size: 7px; }
+    .preview { min-height: 170px; padding: 17px; }
+    .preview h3 { font-size: 21px; }
+  }
+
+  @media (max-width: 390px) {
+    .ratioCard { align-items: flex-start; flex-direction: column; gap: 6px; }
+    .ratioCard > p { text-align: left; }
+    .level { padding: 7px; }
+  }
+}
