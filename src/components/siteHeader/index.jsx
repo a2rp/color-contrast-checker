@@ -9,8 +9,8 @@ const SiteHeader = () => (
         <span>Color <b>Check</b></span>
       </a>
       <nav className={styles.navigation} aria-label="Main navigation">
-        <a href="#checker">Generator</a>
-        <a href="#guide">About UUIDs</a>
+        <a href="#checker">Checker</a>
+        <a href="#guide">WCAG guide</a>
       </nav>
       <a className={styles.repository} href="https://github.com/a2rp/color-contrast-checker" target="_blank" rel="noreferrer">
         <FiGithub aria-hidden="true" /> <span>Repository</span>
